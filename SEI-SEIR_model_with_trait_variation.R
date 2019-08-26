@@ -87,18 +87,14 @@ carrying_capacity_th <- function(temp, T0, EA, N, h0){
   (alpha*N*exp(-EA*((temp-T0)^2)/(kappa*(temp+273.0)*(T0+273.0))))
 }
 
-# K_trh <- function(temp, hum, rain, N){
-#   max(carrying_capacity_th(temp, 29.0, 0.05, N, hum)*(1.126 + 9.094e-03*rain + -5.933e-04*rain^2 + 5.951e-06*rain^3 + -1.892e-08*rain^4), 1000)
-# }
-
-K_trh_right_skewed <- function(temp, h0, rain, Rmax, N){
+K_trh_briere <- function(temp, h0, rain, Rmax, N){
   R0 <- 1
   if((rain < R0) | (rain > Rmax)){
     max(0.01*carrying_capacity_th(temp, 29.0, 0.05, N, h0), 1000)
   }
   else {
-    c <- 7.86e-10
-    max(carrying_capacity_th(temp,29.0,0.05, N, h0)*c*rain*(rain-R0)*exp((Rmax-rain)/15)/100000 + 0.001, 1000)
+    c <- 7.86e-05
+    max(carrying_capacity_th(temp,29.0,0.05, N, h0)*c*rain*(rain-R0)*sqrt(Rmax-rain)*0.3 + 0.001, 1000)
   }
 }
 
@@ -110,16 +106,5 @@ K_tr_quadratic <- function(temp, rain, Rmax, N){
   else {
     c <- -5.99e-03
     max(carrying_capacity_t(temp, 29.0, 0.05, N)*(c*(rain-R0)*(rain-Rmax))/2 + 0.001, 1000)
-  }
-}
-
-K_trh_briere <- function(temp, h0, rain, Rmax, N){
-  R0 <- 1
-  if((rain < R0) | (rain > Rmax)){
-    max(0.01*carrying_capacity_th(temp, 29.0, 0.05, N, h0), 1000)
-  }
-  else {
-    c <- 7.86e-05
-    max(carrying_capacity_th(temp,29.0,0.05, N, h0)*c*rain*(rain-R0)*sqrt(Rmax-rain)*0.3 + 0.001, 1000)
   }
 }

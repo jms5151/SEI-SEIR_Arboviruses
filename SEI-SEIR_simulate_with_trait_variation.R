@@ -5,15 +5,15 @@ rm(list=ls()) #remove previous variable assignments
 library(deSolve)
 
 # load model
-source("Codes/SEI-SEIR_model_with_trait_variation.R")
+source("SEI-SEIR_model_with_trait_variation.R")
 
 # load data 
-source("Codes/SEI-SEIR_simulation_setup.R")
+source("SEI-SEIR_simulation_setup.R")
 
 # run simulations
 traitDF <- data.frame(matrix(ncol = 11, nrow = 0))
 colnames(traitDF) <- c("time", "M1", "M2", "M3", "S", "E", "I", "R", "Date", "simulation_number", "Site")
-traitFileName <- "Concatenated_Data/model_simulations/SEI-SEIR_simulations_with_trait_variation.csv"
+traitFileName <- "SEI-SEIR_simulations_with_trait_variation.csv"
 write.csv(traitDF, traitFileName, row.names = F)
 
 for (j in 1:nrow(trait_posterior)){
