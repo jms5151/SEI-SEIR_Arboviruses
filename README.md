@@ -1,5 +1,5 @@
 # SEI-SEIR_Arboviruses
-Weather-based mechanistic model of arbovirus transmission in Ecuador and Kenya.
+This repository provides code to run weather-based mechanistic models of arboviral transmission. The models support of the manuscript "Weather explains geographic and temporal variation in mosquito-borne disease dynamics" by Caldwell et al (in prep). 
 
 # SEI-SEIR models:
 Temperature-dependent model: SEI-SEIR_model_T.R <br />
