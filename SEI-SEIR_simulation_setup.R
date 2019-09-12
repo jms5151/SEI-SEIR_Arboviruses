@@ -19,7 +19,7 @@ ie <- 0.01
 sites <- c("Chulaimbo", "Kisumu", "Msambweni", "Ukunda", "Huaquillas", "Machala", "Portovelo", "Zaruma")
 
 # set human population numbers for each site 
-population <- c(7304, 547557, 240698, 154048, 57370, 279890, 13670, 25620)
+population <- c(7304, 547557, 240698, 154048, 57366, 279887, 13673, 25615)
 
 # set birth and death rates
 BRs <- c(rep(31.782,4),rep(20.175,4)) # birth rates from https://data.worldbank.org/indicator/SP.DYN.CBRT.IN
