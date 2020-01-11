@@ -90,6 +90,7 @@ carrying_capacity_th <- function(temp, h0, T0, EA, N, timestep){
 }
 
 # carrying capacity with temperature, humidity, and rainfall
+# simulations must assign one of the functions below to K_thr
 K_thr_briere <- function(temp, rain, Rmax, N, timestep){
   R0 <- 1
   if((rain < R0) | (rain > Rmax)){
@@ -118,4 +119,3 @@ K_thr_inverse <- function(temp, rain, Rmax, N, timestep){
   } 
   max(carrying_capacity_th(temp, 100, 29.0, 0.05, N, timestep)*(1/rain), 1000)
 }
-

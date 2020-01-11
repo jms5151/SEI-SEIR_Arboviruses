@@ -1,4 +1,4 @@
-# Temperature, humidity, and rainfall dependent SEI-SEIR model with intervention for reducing carrying capacity
+# Temperature, humidity, and rainfall dependent SEI-SEIR model with intervention for reducing immature mosquiot habitat (carrying capacity)
 seiseir_model_thr_reduceK <- function(t, state, parameters) {
   with(as.list(c(state,parameters)), {
     dM1 <- EFD(temp[t])*pEA(temp[t])*MDR(temp[t])*mu_th(temp[t], hum[t], timestep)^(-1)*(M1+M2+M3)*max((1-((M1+M2+M3)/K_thr_reduceK(temp[t], rain[t], Rmax, (S+E+I+R), timestep, percReduce))),0)-(a(temp[t])*pMI(temp[t])*(I/(S+E+I+R))+mu_th(temp[t], hum[t], timestep))*M1
@@ -89,7 +89,8 @@ carrying_capacity_th <- function(temp, h0, T0, EA, N, timestep){
   (alpha*N*exp(-EA*((temp-T0)^2)/(kappa*(temp+273.0)*(T0+273.0))))
 }
 
-# carrying capacity (Intervention 2 - reduce K by X%)
+# carrying capacity with temperature, humidity, and rainfall
+# simulations must assign one of the functions below to K_thr_reduceK
 K_thr_briere_reduceK <- function(temp, rain, Rmax, N, timestep, percReduce){
   R0 <- 1
   if((rain < R0) | (rain > Rmax)){
@@ -118,4 +119,3 @@ K_thr_inverse_reduceK <- function(temp, rain, Rmax, N, timestep, percReduce){
   } 
   max(carrying_capacity_th(temp, 100, 29.0, 0.05, N, timestep)*(1/rain), 1000) * (1-percReduce)
 }
-
