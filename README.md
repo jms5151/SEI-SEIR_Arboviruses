@@ -17,7 +17,7 @@ Initial conditions (proportion of population in each compartment): LHS_inputs.cs
 Posterior distribution of c, T0, Tmax for temperature-dependent traits: Random_sample_of_posterior_traits.csv 
 
 # simulations
-A single codes is provided to run each model with appropriate data.
+A single code is provided to run each model with appropriate data.
 
 # analyses 
 Compare model output with observational data: correlation_sign_test_anova.R <br />
