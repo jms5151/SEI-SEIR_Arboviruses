@@ -8,11 +8,11 @@ library(deSolve)
 load("data/climate_data.RData")
 
 # load and set initial conditions
-init.cond <- read.csv("data/LHS_inputs.csv", head=T)
+load("data/LHS_inputs.RData")
 startIC <- subset(init.cond, IC == "18")
 
 # load traits
-trait_posterior <- read.csv("data/Random_sample_of_posterior_traits.csv", head=T)
+load("data/Random_sample_of_posterior_traits.RData")
 
 # set immigration and emmigration rate
 ie <- 0.01
