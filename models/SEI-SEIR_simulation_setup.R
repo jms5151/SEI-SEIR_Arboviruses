@@ -1,6 +1,4 @@
 # data to set up model simulations -------------------------------------------------------------
-rm(list=ls()) #remove previous variable assignments
-
 # load packages
 library(deSolve)
 
