@@ -11,7 +11,7 @@ source("models/SEI-SEIR_simulation_setup.R")
 # run simulations
 traitDF <- data.frame(matrix(ncol = 11, nrow = 0))
 colnames(traitDF) <- c("time", "M1", "M2", "M3", "S", "E", "I", "R", "Date", "Site", "Rain_function")
-traitFileName <- "SEI-SEIR_simulations_THR.csv"
+traitFileName <- "output/SEI-SEIR_simulations_THR.csv"
 write.csv(traitDF, traitFileName, row.names = F)
 
 rfunctions_names <- c("Briere", "Quadratic", "Inverse")
