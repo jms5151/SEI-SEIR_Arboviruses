@@ -7,9 +7,6 @@ This repository provides code to run climate-based mechanistic models of arbovir
 # models
 Temperature-, rainfall-, and humidity-dependent model: SEI-SEIR_model_THR.R <br />
 Temperature-, rainfall-, and humidity-dependent model with trait variation: SEI-SEIR_model_with_trait_variation.R <br />
-Intervention 1 - reduce contact rate between mosquitoes and people: SEI-SEIR_model_intervention_reduce_biteRate.R <br />
-Intervention 2 - reduce immature mosquito habitat: SEI-SEIR_model_intervention_reduceK.R <br />
-Intervention 3 - reduce mosquito abundance: SEI-SEIR_model_intervention_spray.R <br />
 Code to set up simulations: SEI-SEIR_simulation_setup.R <br />
 
 # data
@@ -20,5 +17,4 @@ Posterior distribution of c, T0, Tmax for temperature-dependent traits: Random_s
 A single code is provided to run each model with appropriate data.
 
 # analyses 
-Compare model output with observational data: correlation_sign_test_anova.R <br />
-Classification and regression tree model with z-score scores and different climate metrics: CART_model.R 
+Compare model output with observational data: pairwise_correlation.R <br />
