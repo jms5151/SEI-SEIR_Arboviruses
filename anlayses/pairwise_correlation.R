@@ -54,7 +54,7 @@ for (i in 1:length(sites)){
 # subset to max CCF with lag for each site and response variable
 df_max_ccf <- df %>%
   # remove lags beyond 4 months
-  filter(lag >= -8 & lag <= 1) %>%
+  filter(lag >= -4 & lag <= 1) %>%
   group_by(Site, Y) %>%
   # keep site, y, and rain function combination with highest cross-correlation
   filter(CCF == max(CCF)) %>%
