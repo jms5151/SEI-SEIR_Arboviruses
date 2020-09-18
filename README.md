@@ -12,9 +12,12 @@ Code to set up simulations: SEI-SEIR_simulation_setup.R <br />
 # data
 Initial conditions (proportion of population in each compartment): LHS_inputs.csv <br />
 Posterior distribution of c, T0, Tmax for temperature-dependent traits: Random_sample_of_posterior_traits.csv 
+Additional data will be upload upon peer-reviewed publication
 
 # simulations
 A single code is provided to run each model with appropriate data.
 
 # analyses 
 Compare model output with observational data: pairwise_correlation.R <br />
+Compare model output with different socio-ecological characteristics: socio_ecological_relationships.R <br />
+Compare predictions and observations for different epidemic characteristics: epidemic_characteristics.R <br />
