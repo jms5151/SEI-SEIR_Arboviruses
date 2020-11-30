@@ -1,0 +1,9 @@
+Site,Number_outbreaks_predicted,Number_outbreaks_observed,Predicted but not observed,Observed but not predicted
+Huaquillas,3,3,1,1
+Machala,1,2,0,1
+Portovelo,1,2,0,1
+Zaruma,0,0,0,0
+Chulaimbo,2,3,0,1
+Kisumu,4,3,2,0
+Msambweni,2,2,1,1
+Ukunda,2,2,0,0

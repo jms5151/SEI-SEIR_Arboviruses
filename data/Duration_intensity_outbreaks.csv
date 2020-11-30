@@ -1,0 +1,10 @@
+Site,Duration_predicted,Duration_observed,Outbreak_size_predicted,Outbreak_size_observed,Max_infected_predicted,Max_infected_observed,Peak_timing_predicted,Peak_timing_observed
+Huaquillas,6,4,121,50,32,30,7,8
+Huaquillas,10,7,233,91,30,32,4,4
+Machala,8,12,937,1508,333,333,10,10
+Portovelo,7,6,61,55,26,26,1,4
+Chulaimbo,12,8,197,51,27,11,1,6
+Kisumu,6,6,83,53,21,21,6,6
+Kisumu,12,13,167,100,19,19,4,3
+Msambweni,8,8,100,71,29,29,12,12
+Ukunda,9,7,88,52,22,22,8,8
