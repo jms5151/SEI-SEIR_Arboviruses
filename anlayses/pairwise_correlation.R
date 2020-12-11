@@ -4,7 +4,7 @@ cross_correlation_and_lags <- function(df, pred, obs){
   ccfvalues <- ccf(df[, pred], df[, obs])
   # create data frame of output 
   tmpdf <- data.frame("lag" = ccfvalues$lag, "CCF" = round(ccfvalues$acf, 2))
-  tmpdf <- tmpdf %>% filter(lag >= -4 & lag <= 0) %>% filter(CCF == max(CCF))
+  tmpdf <- tmpdf %>% filter(lag >= -5 & lag <= 0) %>% filter(CCF == max(CCF))
   return(list(tmpdf[,"CCF"], tmpdf[, "lag"]))
 } 
 
